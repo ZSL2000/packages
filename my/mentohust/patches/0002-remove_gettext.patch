@@ -1,0 +1,21 @@
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,6 +1,6 @@
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-SUBDIRS = src po
++SUBDIRS = src
+ 
+ dist_doc_DATA = README
+ 
+--- a/configure.ac
++++ b/configure.ac
+@@ -78,7 +78,7 @@ AC_TYPE_SIZE_T
+ # Checks for library functions.
+ AC_CHECK_FUNCS([atexit memmove memset socket strrchr setlocale])
+ 
+-AC_CONFIG_FILES([Makefile src/Makefile po/Makefile.in mentohust.spec])
++AC_CONFIG_FILES([Makefile src/Makefile mentohust.spec])
+ 
+ AC_MSG_RESULT([config result: host($host_os) pcap($with_pcap) notify($enable_notify) encode($enable_encodepass) arp($enable_arp) nls($enable_nls) getopt_long($enable_getopt_long)])
+ AC_OUTPUT
